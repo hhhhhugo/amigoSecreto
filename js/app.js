@@ -3,6 +3,10 @@ let amigo = document.getElementById('nome-amigo');
 let lista = document.getElementById('lista-amigos');
  let sorteio = document.getElementById('lista-sorteio');
 function adicionar() {
+    if (amigo.value == ''){
+        alert ('informe o nome do amigo!')
+        return;
+    }
 amigos.push(amigo.value);
 if (lista.textContent == '') {
     lista.textContent = amigo.value;
