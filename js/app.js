@@ -7,6 +7,10 @@ function adicionar() {
         alert ('informe o nome do amigo!')
         return;
     }
+    if (amigos.includes(amigo.value)){
+        alert('Nome já adicionado"')
+        return;
+    }
 amigos.push(amigo.value);
 if (lista.textContent == '') {
     lista.textContent = amigo.value;
@@ -22,6 +26,10 @@ function embaralhar(lista) {
     }
 }
 function sortear() {
+    if (amigos.length % 2 === 0 + 1){
+        alert('o numeros de amigos é impar, adicione mais um amigo!');
+        return;
+    }
     embaralhar(amigos);
 for (let i = 0; i < amigos.length; i++) {
     if (i == amigos.length - 1) {
